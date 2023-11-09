@@ -5,8 +5,8 @@ const VideoCard = ({ video }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    //Redirect to videoPage
-    navigate("/videos");
+    // Redirect to videoPage
+    navigate(`/videos/${video.id}`);
   };
 
   return (
@@ -23,7 +23,7 @@ const VideoCard = ({ video }) => {
         <div className="card-text">
           <p className="title">{video.title}</p>
           <p className="faded">{video.channelName}</p>
-          <p className="faded">{video.views + "_____" + video.uploadedAt} </p>
+          <p className="faded">{`${video.views} • ${video.uploadedAt}`} </p>
         </div>
       </div>
     </div>

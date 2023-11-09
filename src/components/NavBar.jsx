@@ -1,11 +1,10 @@
+import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FiSearch } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  let loggedIn = "";
 
   const handleClick = () => {
     navigate("/");
@@ -15,9 +14,14 @@ const NavBar = () => {
     navigate("/login");
   };
 
-  useEffect(() => {
-    loggedIn = localStorage.getItem("token");
-  }, []);
+  const handleLogoutClick = () => {
+    // Remove the token from localStorage or perform any other logout logic
+    localStorage.removeItem("token");
+    // Redirect to home page
+    navigate("/");
+  };
+
+  const isAuthenticated = !!localStorage.getItem("token");
 
   return (
     <div className="navbar">
@@ -34,7 +38,15 @@ const NavBar = () => {
           <FiSearch size={20} />
         </button>
       </div>
-      {loggedIn && (
+      {isAuthenticated ? (
+        <>
+          <img
+            className="channelImage"
+            src="https://robohash.org/7"
+            onClick={handleLogoutClick}
+          />
+        </>
+      ) : (
         <button className="signInButton" onClick={handleSignInClick}>
           Sign In
         </button>

@@ -1,9 +1,14 @@
+/* General Styling */
+
+/* Flex container for the main layout */
 .main-flex-container {
   display: flex;
   flex-direction: column;
 }
 
-/* Nabar CSS */
+/* Navbar Styling */
+
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,19 +16,22 @@
   margin: 10px;
 }
 
+/* YouTube logo styling */
 .yt-logo {
   height: 30px;
   cursor: pointer;
 }
 
+/* Search container styling */
 .search-container {
   display: flex;
   align-items: center;
 }
 
+/* Search bar styling */
 .searchBar {
   height: 30px;
-  width: 600px;
+  width: 750px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   margin: 5px;
@@ -31,6 +39,7 @@
   border: 1px solid #666;
 }
 
+/* Search button styling */
 .searchButton {
   height: 34px;
   width: 90px;
@@ -41,23 +50,30 @@
   border: 1px solid #666;
 }
 
+/* Sign In button styling */
 .signInButton {
   height: 35px;
   width: 80px;
   border-radius: 20px;
+  border-color: blue;
+  color: blue;
+  background-color: white;
 }
 
-/* Page CSS */
+/* Page Styling */
 
+/* Main layout container */
 .page {
   display: flex;
   height: 100vh;
 }
 
+/* Sidebar Styling */
 .sidebar {
   width: 20%;
 }
 
+/* Sidebar button styling */
 .sidebar button {
   display: block;
   height: 30px;
@@ -66,8 +82,15 @@
   border: none;
   border-radius: 5px;
   margin: 1px;
+  text-align: start;
 }
 
+.icon {
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+/* Main content container */
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +98,9 @@
   width: 100%;
 }
 
-/* Card CSS */
+/* Card Styling */
+
+/* Video card container */
 .card {
   display: flex;
   width: 30%;
@@ -84,49 +109,80 @@
   cursor: pointer;
 }
 
+/* Card body styling */
 .card-body {
   display: flex;
+  margin: 5px;
 }
 
+/* Card text styling */
 .card-text {
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 
+/* Individual paragraph styling within card text */
 .card-text p {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-wrap: wrap;
 }
 
-/* Image CSS */
+/* Title styling */
+.title {
+  font-weight: bold;
+}
+
+/* Faded text styling */
+.faded {
+  font-size: 75%;
+  color: #666;
+}
+
+/* Video Thumbnail Styling */
 .thumbnail {
   height: 175px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
+/* Channel Image Styling */
 .channelImage {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   border: 1px solid black;
   margin: 5px;
 }
 
-/* <--------------------------VideoPage CSS---------------------------> */
+.channelText p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: wrap;
+}
+
+/* VideoPage Styling */
+
+/* VideoPage container */
 .videoPage {
   display: flex;
+  justify-content: center;
 }
 
+/* Video item styling */
 .videoItem {
-  width: 65%;
+  width: 60%;
 }
 
+/* Suggestion bar styling */
 .suggestionBar {
   width: 30%;
   margin: 20px;
 }
 
+/* Iframe video styling */
 .iframe-video {
   width: 100%;
   aspect-ratio: 16/9;
@@ -134,7 +190,7 @@
   margin: 10px;
 }
 
-/* Description CSS */
+/* Description Styling */
 .description {
   display: flex;
   height: 30px;
@@ -143,6 +199,7 @@
   margin: 10px;
 }
 
+/* Description text styling */
 .description-text {
   margin-left: 20px;
   background-color: rgb(158, 157, 157);
@@ -150,25 +207,31 @@
   padding: 5px;
 }
 
-.title {
-  font-weight: bold;
-}
-
-.faded {
-  font-size: 75%;
-  color: #666;
-}
-
+/* Subscribe button styling */
 .subscribe-button {
   background-color: black;
   color: white;
   font-weight: 700;
-  height: 50px;
-  width: 100px;
+  height: 35px;
+  width: 90px;
   border-radius: 25px;
   margin: 10px;
+  cursor: pointer;
 }
 
+/* Unsubscribe button styling */
+.unsubscribe-button {
+  background-color: #ccc; /* You can customize the color */
+  color: black;
+  font-weight: 700;
+  height: 35px;
+  width: 110px;
+  border-radius: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Pill Styling */
 .pill {
   display: flex;
   align-items: center;
@@ -180,6 +243,7 @@
   margin: 5px;
 }
 
+/* Download pill styling */
 .download-pill {
   display: flex;
   align-items: center;
@@ -191,48 +255,72 @@
   margin: 5px;
 }
 
+/* Mixed group styling */
 .mixed-group {
   display: flex;
   align-items: center;
 }
 
+/* Button group styling */
 .button-group {
   display: flex;
   justify-content: space-around;
 }
 
-/* Suggestion Card CSS */
+/* Suggestion Card Styling */
 .suggestion-card {
   display: flex;
 }
 
+/* Suggestion Thumbnail styling */
 .suggestion-thumbnail {
   height: 100px;
   margin: 10px;
   border-radius: 5%;
 }
 
-/* Form CSS */
+/* LoginPage Styling */
+
+/* Login container styling */
+.login-container {
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling within login container */
 form {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
+/* Label styling within form */
 form label {
   margin-bottom: 5px;
 }
 
+/* Input styling within form */
 form input {
   padding: 8px;
   margin-bottom: 10px;
 }
 
+/* Button styling within form */
 form button {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+/* General Styling */
+
+/* Cursor styling for buttons */
+button {
   cursor: pointer;
 }

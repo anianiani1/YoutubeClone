@@ -1,19 +1,15 @@
 import React from "react";
 
-const SuggestionCard = () => {
+const SuggestionCard = ({ video }) => {
   return (
     <div className="suggestion-card">
-      <img
-        className="suggestion-thumbnail"
-        src="../src/assets/Thumbnail.webp"
-        alt=""
-      />
+      <img className="suggestion-thumbnail" src={video.thumbnail.url} alt="" />
 
       <div className="card-body">
         <div className="card-text">
-          <p>Title</p>
-          <p>Channel Name</p>
-          <p>200K 2 months ago</p>
+          <p className="title">{video.title}</p>
+          <p className="faded">{video.channelName}</p>
+          <p className="faded">{`${video.views} • ${video.uploadedAt}`} </p>
         </div>
       </div>
     </div>
